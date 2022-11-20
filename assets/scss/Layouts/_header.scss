@@ -1,0 +1,38 @@
+header {
+    background-color: $color-black-2;
+    .navbar-brand {
+        max-width: 40px;
+    }
+    .navbar-nav {
+        .nav-item {
+            padding: 0 20px;
+            .nav-link {
+                text-align: center;
+                text-decoration: none;
+                @include styleText($fs-4, $fw-1, $color-grey-1);
+            }
+            .select-bar {
+                cursor: pointer;
+                @include styleText($fs-3, $fw-1, $color-grey-1);
+                background: $color-black-2;
+                border: none;
+                width: 104%;
+                height: 100%;
+                text-align: center;
+            }
+        }
+    }
+    .navbar-toggler {
+        background: $color-white;
+        display: flex;
+        padding: $pd-2 $pd-4;
+        flex-direction: column;
+        .navbar-toggler-icon {
+            background: $color-black-2;
+            height: 2px;
+            width: 20px;
+            margin: 2px 0;
+        }
+    }
+}
+

@@ -1,0 +1,101 @@
+.product-list {
+    margin: 5% 0;
+    .product {
+        border-radius: $br-2;
+        position: relative;
+        height: 300px;
+        width: 230px;
+        overflow: hidden;
+        box-shadow: 0 7px 5px -5px #4d4b4b;
+        transition: 0.5s;
+        transform: scaleX(0.9);
+        margin: auto;
+        .product-header {
+            margin-bottom: 3%;
+            i {
+                font-size: $fs-5;
+            }
+            span {
+                font-style: italic;
+                @include styleText($fs-2, $fw-1, rgb(55, 226, 55));
+            }
+        }
+        .product-img {
+            position: absolute;
+            height: 185px;
+            width: 185px;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+        }
+        .product-detail {
+            position: absolute;
+            height: 220px;
+            width: 100%;
+            background: $color-black-2;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: $pd-4;
+            bottom: -175px;
+            transition: 0.25s;
+            border-radius: $br-2;
+            left: 0;
+        }
+        &:hover {
+            height: 460px;
+            width: 260px;
+            box-shadow: 0 5px 15px rgb(0 0 0 / 50%);
+            transform: scaleX(1);
+            .product-detail {
+                bottom: 0;
+                .wrapper,
+                .price,
+                button {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+.product {
+    .product-detail {
+        .product-name {
+            align-items: baseline;
+            color: $color-white;
+            button {
+                color: $color-white;
+                @include styleBtn(none, none, none, $br-1, 0);
+                transition: 0.2s;
+            }
+            .heart-red {
+                color: red;
+            }
+        }
+        .wrapper {
+            flex-direction: column;
+            justify-content: space-between;
+            transform: translateY(5px);
+            display: none;
+            color: $color-white;
+            p {
+                @include styleText($fs-2, $fw-2, $color-white);
+            }
+        }
+        .purchase {
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            color: $color-white;
+            .price {
+                display: none;
+            }
+            button {
+                align-items: center;
+                display: none;
+                font-size: $fs-1;
+                @include styleBtn($color-grey-2, 1px solid black, $br-2, $pd-4, $pd-3);
+                @include styleHoverBtn($color-white, 1px solid black, $color-black);
+            }
+        }
+    }
+}

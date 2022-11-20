@@ -1,0 +1,39 @@
+@mixin styleText($fs, $fw, $color) {
+   font-size: $fs;
+   font-weight: $fw;
+   color: $color;
+}
+
+@mixin styleBtn($bg, $border, $br, $pd-x, $pd-y) {
+   background: $bg;
+   border: $border;
+   border-radius: $br;
+   padding: $pd-y $pd-x;
+}
+
+@mixin styleHoverBtn($bg, $border, $color) {
+   &:hover {
+      background: $bg;
+      border: $border;
+      color: $color;
+   }
+}
+
+@mixin display($opa, $visi) {
+   opacity: $opa;
+   visibility: $visi;
+}
+
+@mixin responsive($screen) {
+   @if (map-has-key($map: $breakpoints, $key: $screen)) {
+      $value: map-get(
+         $map: $breakpoints,
+         $key: $screen,
+      );
+      @media screen and (max-width: $value) {
+         @content;
+      }
+   } @else {
+      @warn "Khong ton tai";
+   }
+}
