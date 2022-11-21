@@ -34,5 +34,23 @@ header {
             margin: 2px 0;
         }
     }
+    .navbar {
+        .form-inline {
+            input {
+                border: none;
+            }
+            button {
+                &:hover {
+                    i {
+                        color: $color-black;
+                    }
+                }
+                i {
+                    position: relative;
+                    z-index: 2;
+                    color: $color-white;
+                }
+            }
+        }
+    }
 }
-

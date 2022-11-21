@@ -1,0 +1,21 @@
+.infor {
+    .nav-tabs {
+        .nav-link {
+            @include styleText($fs-4, $fw-2, $color-black-2);
+        }
+        .nav-link.active {
+            background: $color-black-2;
+            color: $color-white;
+            opacity: 0.8;
+        }
+    }
+    tbody {
+        .product-img {
+            max-width: 150px;
+        }
+        td,
+        th {
+            vertical-align: baseline;
+        }
+    }
+}

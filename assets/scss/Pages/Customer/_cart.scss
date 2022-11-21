@@ -244,6 +244,14 @@
                 }
                 .cart-items {
                     width: 95%;
+                    button {
+                        font-size: $fs-5;
+                    }
+                    .quantity {
+                        button {
+                            margin: 0;
+                        }
+                    }
                 }
             }
             .side-nav-footer {

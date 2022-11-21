@@ -7,6 +7,43 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 
+.btn-spreadOut {
+  position: relative;
+  background: none;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 20px;
+}
+.btn-spreadOut:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transform: scaleX(0.3);
+  opacity: 0;
+  transition: all 0.3s;
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+.btn-spreadOut:hover::before {
+  opacity: 1;
+  background-color: white;
+  transform: scaleX(1);
+  transition: transform 0.6s cubic-bezier(0.08, 0.35, 0.13, 1.02), opacity;
+  border-color: white;
+}
+
+.btn-Add {
+  background: none;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 20px;
+}
+
 header {
   background-color: #212124;
 }
@@ -45,6 +82,17 @@ header .navbar-toggler .navbar-toggler-icon {
   height: 2px;
   width: 20px;
   margin: 2px 0;
+}
+header .navbar .form-inline input {
+  border: none;
+}
+header .navbar .form-inline button:hover i {
+  color: black;
+}
+header .navbar .form-inline button i {
+  position: relative;
+  z-index: 2;
+  color: white;
 }
 
 .side-navbar {
@@ -275,6 +323,12 @@ header .navbar-toggler .navbar-toggler-icon {
   header .side-navbar .side-nav-body .cart-items {
     width: 95%;
   }
+  header .side-navbar .side-nav-body .cart-items button {
+    font-size: 1.2rem;
+  }
+  header .side-navbar .side-nav-body .cart-items .quantity button {
+    margin: 0;
+  }
   header .side-navbar .side-nav-footer strong {
     margin-top: 5%;
     margin-left: 30%;
@@ -402,4 +456,22 @@ header .navbar-toggler .navbar-toggler-icon {
   background: white;
   border: 1px solid black;
   color: black;
+}
+
+.infor .nav-tabs .nav-link {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #212124;
+}
+.infor .nav-tabs .nav-link.active {
+  background: #212124;
+  color: white;
+  opacity: 0.8;
+}
+.infor tbody .product-img {
+  max-width: 150px;
+}
+.infor tbody td,
+.infor tbody th {
+  vertical-align: baseline;
 }

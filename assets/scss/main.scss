@@ -9,6 +9,8 @@
 
 //Components
 
+@import "./Components/button";
+
 //Layouts
 @import "./Layouts/header";
 
@@ -16,5 +18,5 @@
 
 @import "./Pages/Customer/cart";
 @import "./Pages/Customer/product";
+@import "./Pages/Admin/product-infor";
 //Theme
-
