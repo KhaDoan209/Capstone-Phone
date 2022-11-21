@@ -1,8 +1,17 @@
 body {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    background: color-grey-2;
-    position: relative;
-    font-family: "Source Sans Pro", sans-serif;
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   background: color-grey-2;
+   position: relative;
+   font-family: 'Source Sans Pro', sans-serif;
+   label {
+      font-weight: $fw-2;
+   }
+   .form-control {
+      &:focus {
+         border: 1px solid rgb(82, 82, 82);
+         box-shadow: 0 0 0 0.2rem rgba(60, 66, 71, 0.25);
+      }
+   }
 }

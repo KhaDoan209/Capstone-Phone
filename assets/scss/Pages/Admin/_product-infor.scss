@@ -1,21 +1,58 @@
 .infor {
-    .nav-tabs {
-        .nav-link {
-            @include styleText($fs-4, $fw-2, $color-black-2);
-        }
-        .nav-link.active {
-            background: $color-black-2;
-            color: $color-white;
-            opacity: 0.8;
-        }
-    }
-    tbody {
-        .product-img {
-            max-width: 150px;
-        }
-        td,
-        th {
-            vertical-align: baseline;
-        }
-    }
+   .nav-tabs {
+      .nav-link {
+         border-top-left-radius: 10px;
+         border-top-right-radius: 10px;
+         @include styleText($fs-3, $fw-2, $color-black-2);
+      }
+      .nav-link.active {
+         background: $color-black-2;
+         color: $color-white;
+         opacity: 0.8;
+      }
+   }
+   tbody {
+      @include styleText($fs-5, $fw-2, $color-black-2);
+      .product-img {
+         width: 150px;
+         img {
+            margin-left: 50%;
+         }
+      }
+      td,
+      th {
+         vertical-align: baseline;
+      }
+   }
+}
+
+.phone-infor-detail {
+   margin-top: 5%;
+   .col-7 {
+      padding: 0 3%;
+      position: relative;
+      .title {
+         @include styleText($fs-7 + 3.5, $fw-3, $color-black-2);
+         text-transform: uppercase;
+      }
+      h2 {
+         @include styleText($fs-7, $fw-2, $color-black-2);
+         margin: 1% 0;
+         text-transform: capitalize;
+      }
+      p {
+         @include styleText($fs-5, $fw-2, $color-black-2);
+      }
+      span {
+         @include styleText($fs-4, $fw-1, $color-black-2);
+      }
+   }
+}
+
+.phone-infor-detail {
+   .modal-content {
+      .modal-title {
+         @include styleText($fs-7, $fw-2, $color-black-2);
+      }
+   }
 }

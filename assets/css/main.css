@@ -6,6 +6,13 @@ body {
   position: relative;
   font-family: "Source Sans Pro", sans-serif;
 }
+body label {
+  font-weight: 600;
+}
+body .form-control:focus {
+  border: 1px solid rgb(82, 82, 82);
+  box-shadow: 0 0 0 0.2rem rgba(60, 66, 71, 0.25);
+}
 
 .btn-spreadOut {
   position: relative;
@@ -37,11 +44,30 @@ body {
   border-color: white;
 }
 
-.btn-Add {
-  background: none;
-  border: none;
+.btn-white {
+  transition: all 0.3s;
+  background: white;
+  border: 1px solid #212124;
   border-radius: 5px;
-  padding: 5px 20px;
+  padding: 0.375rem 0.75rem;
+}
+.btn-white:hover {
+  background: #212124;
+  color: #f5f5f7;
+}
+
+.btn-black {
+  transition: all 0.3s;
+  color: white;
+  background: #212124;
+  border: 1px solid #d7d7d7;
+  border-radius: 5px;
+  padding: 0.375rem 0.75rem;
+}
+.btn-black:hover {
+  border: 1px solid #212124;
+  background: white;
+  color: #212124;
 }
 
 header {
@@ -184,8 +210,11 @@ header .navbar .form-inline button i {
 }
 .cart-items .cart-item .cart-img {
   max-width: 130px;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
   max-height: fit-content;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .cart-items .cart-item .name {
   font-size: 1.1rem;
@@ -387,7 +416,7 @@ header .navbar .form-inline button i {
   flex-direction: column;
   justify-content: space-between;
   padding: 10px;
-  bottom: -175px;
+  bottom: -179px;
   transition: 0.25s;
   border-radius: 20px;
   left: 0;
@@ -459,7 +488,9 @@ header .navbar .form-inline button i {
 }
 
 .infor .nav-tabs .nav-link {
-  font-size: 1.1rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-size: 16px;
   font-weight: 600;
   color: #212124;
 }
@@ -468,10 +499,55 @@ header .navbar .form-inline button i {
   color: white;
   opacity: 0.8;
 }
+.infor tbody {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #212124;
+}
 .infor tbody .product-img {
-  max-width: 150px;
+  width: 150px;
+}
+.infor tbody .product-img img {
+  margin-left: 50%;
 }
 .infor tbody td,
 .infor tbody th {
   vertical-align: baseline;
 }
+
+.phone-infor-detail {
+  margin-top: 5%;
+}
+.phone-infor-detail .col-7 {
+  padding: 0 3%;
+  position: relative;
+}
+.phone-infor-detail .col-7 .title {
+  font-size: 5.5rem;
+  font-weight: 700;
+  color: #212124;
+  text-transform: uppercase;
+}
+.phone-infor-detail .col-7 h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #212124;
+  margin: 1% 0;
+  text-transform: capitalize;
+}
+.phone-infor-detail .col-7 p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #212124;
+}
+.phone-infor-detail .col-7 span {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #212124;
+}
+
+.phone-infor-detail .modal-content .modal-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #212124;
+}/*# sourceMappingURL=main.css.map */
