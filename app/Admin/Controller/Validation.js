@@ -19,7 +19,7 @@ function Validation() {
 	};
 
 	this.checkName = function (valueInput, msgErr, spanID) {
-		var pattern = /^[(A-Z)(a-z)(0-9)\s]{1,17}$/;
+		var pattern = /^[(A-Z)(a-z)(0-9)\s]{1,20}$/;
 		if (valueInput.match(pattern)) {
 			document.getElementById(spanID).innerHTML = '';
 			return true;
@@ -39,7 +39,9 @@ function Validation() {
 	};
 
 	this.checkCamera = function (valueInput, msgErr, spanID) {
-		var pattern = /^[(A-Z)(a-z)(0-9)\s]{1,21}$/;
+		var pattern =
+			/^[(a-z)(,.;:&)(A-Z-ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềếểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịìíĩọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ)\s\d]{1,31}$/;
+
 		if (valueInput.match(pattern)) {
 			document.getElementById(spanID).innerHTML = '';
 			return true;
@@ -50,7 +52,7 @@ function Validation() {
 
 	this.checkDesc = function (valueInput, msgErr, spanID) {
 		var pattern =
-			/^[(a-z A-Z-ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ)(0-9)\s]{1,149}$/;
+			/^[(a-z)(,.;:&)(A-Z-ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềếểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịìíĩọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ)\s\d]{1,140}$/;
 		if (valueInput.match(pattern)) {
 			document.getElementById(spanID).innerHTML = '';
 			return true;

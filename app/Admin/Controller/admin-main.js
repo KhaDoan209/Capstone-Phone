@@ -80,7 +80,7 @@ function addNewPhone() {
 		validation.checkEmpty(backCamera, `Back camera can't be empty`, 'backCamera-add-error') &&
 		validation.checkCamera(
 			backCamera,
-			`Back camera must be less than 20 letters`,
+			`Back camera must be less than 30 letters`,
 			'backCamera-add-error'
 		);
 
@@ -92,7 +92,7 @@ function addNewPhone() {
 		) &&
 		validation.checkCamera(
 			frontCamera,
-			`Front camera must be less than 20 letters`,
+			`Front camera must be less than 30 letters`,
 			'frontCamera-add-error'
 		);
 	isValid &= validation.checkEmpty(img, `Image link can't be empty`, 'img-add-error');
@@ -148,7 +148,7 @@ function updatePhoneInfor(id) {
 	var isValid = true;
 
 	isValid &=
-		validation.checkEmpty(newName, `Name can't be empty`, 'name-add-error') &&
+		validation.checkEmpty(newName, `Name can't be empty`, 'name-update-error') &&
 		validation.checkName(
 			newName,
 			`Name must be less than 17 letters including white space`,
@@ -156,7 +156,7 @@ function updatePhoneInfor(id) {
 		);
 
 	isValid &=
-		validation.checkEmpty(newPrice, `Price can't be empty`, 'price-add-error') &&
+		validation.checkEmpty(newPrice, `Price can't be empty`, 'price-update-error') &&
 		validation.checkPrice(
 			newPrice,
 			`Price must be less than 6 numbers before and 3 numbers after the comma`,
@@ -168,7 +168,7 @@ function updatePhoneInfor(id) {
 		validation.checkScreen(
 			newScreen,
 			`Screen must be less than 30 letters`,
-			'screen-add-error'
+			'screen-update-error'
 		);
 
 	isValid &=
@@ -179,7 +179,7 @@ function updatePhoneInfor(id) {
 		) &&
 		validation.checkCamera(
 			newBackCam,
-			`Back camera must be less than 20 letters`,
+			`Back camera must be less than 30 letters without special symbols except , . ; : &`,
 			'backCamera-update-error'
 		);
 
@@ -191,15 +191,15 @@ function updatePhoneInfor(id) {
 		) &&
 		validation.checkCamera(
 			newFrontCam,
-			`Front camera must be less than 20 letters`,
+			`Front camera must be less than 30 letters without special symbols except , . ; : &`,
 			'frontCamera-update-error'
 		);
-	isValid &= validation.checkEmpty(newImg, `Image link can't be empty`, 'img-add-error');
+	isValid &= validation.checkEmpty(newImg, `Image link can't be empty`, 'img-update-error');
 	isValid &=
 		validation.checkEmpty(newDesc, `Description can't be empty`, 'description-update-error') &&
 		validation.checkDesc(
 			newDesc,
-			`Description must be less than 150 letters without special symbols`,
+			`Description must be less than 150 letters without special symbols except , . ; : &`,
 			'description-update-error'
 		);
 	if (isValid) {
@@ -354,6 +354,7 @@ function viewPhoneInfor(id) {
                                  aria-describedby="emailHelp"
                               />
                               <div class="error" id="frontCamera-update-error"></div>
+
                               <label for="update-img"
                                  >Image Link</label
                               >
@@ -363,7 +364,8 @@ function viewPhoneInfor(id) {
                                  id="update-img"
                                  aria-describedby="emailHelp"
                               />
-                              <div class="error" id="description-update-error"></div>
+                              <div class="error" id="img-update-error"></div>
+
                               <label for="update-desc"
                                  >Description</label
                               >
@@ -373,7 +375,7 @@ function viewPhoneInfor(id) {
                                  id="update-desc"
                                  aria-describedby="emailHelp"
                               />
-
+							  <div class="error" id="description-update-error"></div>
                               <label for="update-type"
                                  >Type</label
                               >
