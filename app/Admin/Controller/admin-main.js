@@ -451,6 +451,7 @@ function searchPhone() {
 					searchResult.push(item);
 				}
 			});
+			getEle('nav-productList-tab').click();
 			return displayPhoneList(searchResult);
 		})
 		.catch(function (error) {
