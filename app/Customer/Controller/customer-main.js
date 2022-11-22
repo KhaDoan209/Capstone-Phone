@@ -37,7 +37,7 @@ function displayPhoneList(array) {
 	array.map(function (item) {
 		content += `
         <div class="col-12 col-sm-6 col-lg-3 mx-auto my-3">
-        <div class="product p-3 border">
+        <div class="product p-3 border animate__animated animate__fadeInUp">
             <div class="product-header d-flex justify-content-between">
                 <i class="fa-brands fa-apple"></i>
                 <span>In Stock</span>

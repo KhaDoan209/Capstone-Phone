@@ -22,7 +22,7 @@ getPhoneList();
 function displayPhoneList(array) {
 	var content = '';
 	array.map(function (item) {
-		content += `<tr>
+		content += `<tr class="animate__animated animate__fadeInRight animate__slow">
         <th scope="row">${item.id}</th>
         <td>
             <div
@@ -241,7 +241,7 @@ function viewPhoneInfor(id) {
 			console.log(result.data.name);
 			var content = ` <div class="container">
          <div class="row">
-            <div class="col-5">
+            <div class="col-5 animate__animated animate__zoomInDown animate__slow">
                <div class="img-infor">
                   <img
                      class="img-fluid"
@@ -251,7 +251,7 @@ function viewPhoneInfor(id) {
                   />
                </div>
             </div>
-            <div class="col-7">
+            <div class="col-7 animate__animated animate__fadeInRight animate__delay-1s">
                <h1 class="title">${result.data.name}</h1>
                <h2>Price: ${result.data.price}$</h2>
                <p>${result.data.desc}</p>
