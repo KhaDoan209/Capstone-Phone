@@ -186,9 +186,7 @@ function decreaseCartItem(id) {
 function increaseCartItem(id) {
    listItemInCart.cartList.forEach((item) => {
       if (item.id == id) {
-         if (item.quantity < 20) {
-            item.quantity += 1;
-         }
+         item.quantity += 1;
       }
       setLocalStorage();
       calTotalPrice(listItemInCart.cartList);
