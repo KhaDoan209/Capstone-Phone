@@ -4,7 +4,7 @@ body {
    box-sizing: border-box;
    background: color-grey-2;
    position: relative;
-   font-family: 'Source Sans Pro', sans-serif;
+   font-family: "Source Sans Pro", sans-serif;
    label {
       font-weight: $fw-2;
    }
@@ -13,5 +13,8 @@ body {
          border: 1px solid rgb(82, 82, 82);
          box-shadow: 0 0 0 0.2rem rgba(60, 66, 71, 0.25);
       }
+   }
+   .error {
+      @include styleText($fs-4, $fw-2, red);
    }
 }

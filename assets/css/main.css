@@ -13,6 +13,11 @@ body .form-control:focus {
   border: 1px solid rgb(82, 82, 82);
   box-shadow: 0 0 0 0.2rem rgba(60, 66, 71, 0.25);
 }
+body .error {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: red;
+}
 
 .btn-spreadOut {
   position: relative;
@@ -210,11 +215,8 @@ header .navbar .form-inline button i {
 }
 .cart-items .cart-item .cart-img {
   max-width: 130px;
-  max-height: -webkit-fit-content;
-  max-height: -moz-fit-content;
   max-height: fit-content;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .cart-items .cart-item .name {
   font-size: 1.1rem;
@@ -532,7 +534,7 @@ header .navbar .form-inline button i {
   font-size: 2rem;
   font-weight: 600;
   color: #212124;
-  margin: 1% 0;
+  margin: 3% 0;
   text-transform: capitalize;
 }
 .phone-infor-detail .col-7 p {
@@ -550,4 +552,4 @@ header .navbar .form-inline button i {
   font-size: 2rem;
   font-weight: 600;
   color: #212124;
-}/*# sourceMappingURL=main.css.map */
+}
