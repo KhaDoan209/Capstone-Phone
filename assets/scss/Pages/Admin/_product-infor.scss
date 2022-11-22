@@ -22,6 +22,14 @@
       td,
       th {
          vertical-align: baseline;
+         .phone-name {
+            transition: all 0.3s;
+            &:hover {
+               color: rgb(12, 6, 199);
+               opacity: 0.8;
+               cursor: pointer;
+            }
+         }
       }
    }
 }
@@ -53,6 +61,35 @@
    .modal-content {
       .modal-title {
          @include styleText($fs-7, $fw-2, $color-black-2);
+      }
+   }
+}
+
+@include responsive("medium") {
+   .infor {
+      tbody {
+         .product-img {
+            img {
+               margin-left: 25%;
+            }
+         }
+      }
+   }
+   .phone-infor-detail {
+      .col-7 {
+         .title {
+            font-size: $fs-7 + 2;
+         }
+         h2 {
+            font-size: $fs-6;
+         }
+         p {
+            font-size: $fs-4;
+            margin: 0.5rem 0;
+         }
+         span {
+            font-size: 1rem;
+         }
       }
    }
 }

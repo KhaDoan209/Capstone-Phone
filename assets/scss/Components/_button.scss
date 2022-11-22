@@ -2,7 +2,7 @@
    position: relative;
    @include styleBtn(none, none, 5px, $pd-5, $pd-2);
    &:before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       right: 0;
@@ -27,13 +27,7 @@
 
 .btn-white {
    transition: all 0.3s;
-   @include styleBtn(
-      $color-white,
-      1px solid $color-black-2,
-      5px,
-      0.75rem,
-      0.375rem
-   );
+   @include styleBtn($color-white, 1px solid $color-black-2, 5px, 0.75rem, 0.375rem);
    &:hover {
       background: $color-black-2;
       color: $color-grey-2;
@@ -43,16 +37,22 @@
 .btn-black {
    transition: all 0.3s;
    color: $color-white;
-   @include styleBtn(
-      $color-black-2,
-      1px solid $color-grey-1,
-      5px,
-      0.75rem,
-      0.375rem
-   );
+   @include styleBtn($color-black-2, 1px solid $color-grey-1, 5px, 0.75rem, 0.375rem);
    &:hover {
       border: 1px solid $color-black-2;
       background: $color-white;
       color: $color-black-2;
+   }
+}
+
+.btn-red {
+   font-size: $fs-5;
+   opacity: 0.7;
+   color: red;
+   transition: all 0.3s;
+   @include styleBtn(none, none, 5px, 0, 0);
+   &:hover {
+      color: red;
+      opacity: 1;
    }
 }

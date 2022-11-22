@@ -18,6 +18,7 @@ function getPhoneList() {
 		});
 }
 getPhoneList();
+
 function displayPhoneList(array) {
 	var content = '';
 	array.map(function (item) {
@@ -34,11 +35,10 @@ function displayPhoneList(array) {
                 />
             </div>
         </td>
-        <td><strong>${item.name}</strong></td>
+        <td><strong class="phone-name" data-toggle="tooltip" data-placement="top" title="Click to view" onclick="viewPhoneInfor('${item.id}')">${item.name}</strong></td>
         <td><strong>${item.price}$</strong></td>
         <td>
-            <button class="btn btn-success" onclick="viewPhoneInfor('${item.id}' )">Xem</button>
-            <button class="btn btn-danger ml-2" onclick="removePhoneFromStore('${item.id}')">Xóa</button> 
+            <button class="btn btn-red  ml-2" onclick="removePhoneFromStore('${item.id}')"><i class="fa-solid fa-circle-minus"></i></button> 
         </td>
     </tr>`;
 	});
@@ -119,16 +119,21 @@ function addNewPhone() {
 			});
 	}
 }
+
 function removePhoneFromStore(id) {
-	phoneService
-		.deletePhone(id)
-		.then((result) => {
-			alert(`Product removed sucessfully`);
-			getPhoneList();
-		})
-		.catch((error) => {
-			alert(`${error}. Cannot remove the product`);
-		});
+	if (confirm('Do you want to remove the product ?')) {
+		if (confirm('Are you really sure?')) {
+			phoneService
+				.deletePhone(id)
+				.then((result) => {
+					alert(`Product removed sucessfully`);
+					getPhoneList();
+				})
+				.catch((error) => {
+					alert(`${error}. Cannot remove the product`);
+				});
+		}
+	}
 }
 
 function updatePhoneInfor(id) {
@@ -432,3 +437,25 @@ function clearInputSpace() {
 		item.value.replace(/\s/g, '');
 	});
 }
+
+function searchPhone() {
+	var searchResult = [];
+	var kw = getEle('input-search').value.toLowerCase().replace(/\s/g, '');
+	phoneService
+		.getPhone()
+		.then(function (result) {
+			result.data.map((item) => {
+				var name = item.name.toLowerCase().replace(/\s/g, '');
+				var position = name.indexOf(kw);
+				if (position > -1) {
+					searchResult.push(item);
+				}
+			});
+			return displayPhoneList(searchResult);
+		})
+		.catch(function (error) {
+			alert(`Cannot get data.
+	   Error:${error}`);
+		});
+}
+getEle('input-search').onkeyup = searchPhone;

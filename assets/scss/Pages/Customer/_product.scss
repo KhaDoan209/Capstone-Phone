@@ -93,13 +93,7 @@
             align-items: center;
             display: none;
             font-size: $fs-1;
-            @include styleBtn(
-               $color-grey-2,
-               1px solid black,
-               $br-2,
-               $pd-4,
-               $pd-3
-            );
+            @include styleBtn($color-grey-2, 1px solid black, $br-2, $pd-4, $pd-3);
             @include styleHoverBtn($color-white, 1px solid black, $color-black);
          }
       }
