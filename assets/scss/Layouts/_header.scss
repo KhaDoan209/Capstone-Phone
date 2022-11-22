@@ -54,3 +54,17 @@ header {
       }
    }
 }
+@include responsive('small') {
+   header {
+      .navbar-nav {
+         .nav-item {
+            .select-bar {
+               margin-left: 27%;
+               width: 50%;
+               height: 100%;
+               text-align: center !important;
+            }
+         }
+      }
+   }
+}
