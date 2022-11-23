@@ -141,12 +141,20 @@ header .navbar .form-inline button i {
   color: white;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   header .navbar-nav .nav-item .select-bar {
-    margin-left: 27%;
+    margin-left: 45%;
     width: 50%;
     height: 100%;
-    text-align: center !important;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 576px) {
+  header .navbar-nav .nav-item .select-bar {
+    margin-left: 40%;
+    width: 50%;
+    height: 100%;
+    text-align: center;
   }
 }
 .side-navbar {
@@ -238,11 +246,8 @@ header .navbar .form-inline button i {
 }
 .cart-items .cart-item .cart-img {
   max-width: 130px;
-  max-height: -webkit-fit-content;
-  max-height: -moz-fit-content;
   max-height: fit-content;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .cart-items .cart-item .name {
   font-size: 1.1rem;
@@ -714,4 +719,4 @@ body .index-content .index-right .index-img-right a:hover {
     top: 40%;
     left: 37%;
   }
-}/*# sourceMappingURL=main.css.map */
+}
