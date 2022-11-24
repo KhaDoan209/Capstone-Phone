@@ -12,6 +12,7 @@ header {
             @include styleText($fs-4, $fw-1, $color-grey-1);
          }
          .select-bar {
+            padding: 0;
             cursor: pointer;
             @include styleText($fs-3, $fw-1, $color-grey-1);
             background: $color-black-2;
