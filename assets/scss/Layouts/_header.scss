@@ -54,31 +54,3 @@ header {
       }
    }
 }
-@include responsive("medium") {
-   header {
-      .navbar-nav {
-         .nav-item {
-            .select-bar {
-               margin-left: 45%;
-               width: 50%;
-               height: 100%;
-               text-align: center;
-            }
-         }
-      }
-   }
-}
-@include responsive("small") {
-   header {
-      .navbar-nav {
-         .nav-item {
-            .select-bar {
-               margin-left: 40%;
-               width: 50%;
-               height: 100%;
-               text-align: center;
-            }
-         }
-      }
-   }
-}

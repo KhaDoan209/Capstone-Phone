@@ -141,22 +141,6 @@ header .navbar .form-inline button i {
   color: white;
 }
 
-@media screen and (max-width: 768px) {
-  header .navbar-nav .nav-item .select-bar {
-    margin-left: 45%;
-    width: 50%;
-    height: 100%;
-    text-align: center;
-  }
-}
-@media screen and (max-width: 576px) {
-  header .navbar-nav .nav-item .select-bar {
-    margin-left: 40%;
-    width: 50%;
-    height: 100%;
-    text-align: center;
-  }
-}
 .side-navbar {
   position: fixed;
   top: 0;
