@@ -22,7 +22,7 @@ getPhoneList();
 function displayPhoneList(array) {
    var content = '';
    array.map(function (item) {
-      content += `<tr class="animate__animated animate__fadeInRight animate__slow">
+      content += `<tr>
         <th scope="row">${item.id}</th>
         <td>
             <div
